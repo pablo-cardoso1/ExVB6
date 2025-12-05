@@ -65,12 +65,11 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Form_Activate()
-     txtNome.SetFocus ' quando ativao formulario o foco ira para Nome
+     txtNome.SetFocus ' quando ativar o formulario o foco ira para Nome
 End Sub
 
 Private Sub cmbAdicionar_Click()
-
-    ' Chama a função adicionar nomes.
+    
     AdicionarNome
 
 End Sub
@@ -106,21 +105,19 @@ End Sub
 
 Private Sub txtNome_KeyPress(KeyAscii As Integer)
 
-    ' Se o usuário pressionou Enter (código ASCII 13)...
+    ' Se o usuário pressionou Enter
     If KeyAscii = 13 Then
         
-        ' ...chama a rotina que adiciona o nome
+        ' ...chama a funcao que adiciona o nome
         AdicionarNome
         
-        ' Remove o beep padrão do Enter no TextBox
-        KeyAscii = 0
     End If
 
 End Sub
 
 Private Sub cmbLimpar_Click()
 
-    ' Limpa todo o textbox
+    ' Limpa o textbox
     lstNomes.Text = ""
 
     ' Devolve o foco para o campo de texto
@@ -130,7 +127,7 @@ End Sub
 
 Private Sub Form_QueryUnload(Cancel As Integer, UnloadMode As Integer)
 
-    ' Só avisa se houver algo dentro da lista
+    ' Só avisa se houver algo dentro da lista, se não fecha normal
     If Trim(lstNomes.Text) <> "" Then
         
         If MsgBox("Deseja realmente sair? Todos os nomes serão perdidos.", _
