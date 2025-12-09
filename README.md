@@ -4,8 +4,8 @@ Este repositório contém quatro exercícios desenvolvidos em Visual Basic 6 (VB
 
 🧩 Progresso dos Exercícios:
 
-Exercício    	Descrição	                        Status
+Exercício    	  Descrição	                        Status
 - Exercício 1	  (Adicionar Nomes)	                - Concluido
 - Exercício 2	  (Fazer uma lista de clientes)	    - Concluido
-- Exercício 3	  (Atualização do exercício 2)	    - Em andamento
-- Exercício 4	  (Atualização do exercício 3)	    - Não iniciado
+- Exercício 3	  (Atualização do exercício 2)	    - Concluido
+- Exercício 4	  (Atualização do exercício 3)	    - Em andamento
