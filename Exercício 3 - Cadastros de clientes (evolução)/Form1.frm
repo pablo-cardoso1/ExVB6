@@ -16,6 +16,7 @@ Begin VB.Form Form1
       Left            =   1680
       TabIndex        =   23
       Top             =   240
+      Visible         =   0   'False
       Width           =   1335
    End
    Begin VB.CommandButton cmdConfirmar 
@@ -24,12 +25,13 @@ Begin VB.Form Form1
       Left            =   120
       TabIndex        =   22
       Top             =   240
+      Visible         =   0   'False
       Width           =   1455
    End
    Begin FPSpreadADO.fpSpread fpSpread1 
       Height          =   2775
       Left            =   120
-      TabIndex        =   15
+      TabIndex        =   20
       Top             =   3360
       Width           =   9135
       _Version        =   458752
@@ -53,15 +55,15 @@ Begin VB.Form Form1
       Caption         =   "Excluir"
       Height          =   375
       Left            =   8280
-      TabIndex        =   3
+      TabIndex        =   6
       Top             =   120
       Width           =   975
    End
-   Begin VB.CommandButton Command2 
+   Begin VB.CommandButton cmdEditar 
       Caption         =   "Editar"
       Height          =   375
       Left            =   7200
-      TabIndex        =   2
+      TabIndex        =   3
       Top             =   120
       Width           =   975
    End
@@ -69,7 +71,7 @@ Begin VB.Form Form1
       Caption         =   "Incluir"
       Height          =   375
       Left            =   6120
-      TabIndex        =   1
+      TabIndex        =   2
       Top             =   120
       Width           =   975
    End
@@ -77,7 +79,7 @@ Begin VB.Form Form1
       Caption         =   "Dados"
       Height          =   2055
       Left            =   120
-      TabIndex        =   0
+      TabIndex        =   1
       Top             =   1200
       Visible         =   0   'False
       Width           =   9135
@@ -85,14 +87,14 @@ Begin VB.Form Form1
          Caption         =   "Tipo de comunicação"
          Height          =   735
          Left            =   3360
-         TabIndex        =   17
+         TabIndex        =   21
          Top             =   1200
          Width           =   4575
          Begin VB.OptionButton opbCarta 
             Caption         =   "Carta"
             Height          =   195
             Left            =   3360
-            TabIndex        =   21
+            TabIndex        =   13
             Top             =   360
             Width           =   1095
          End
@@ -100,7 +102,7 @@ Begin VB.Form Form1
             Caption         =   "WhatsApp"
             Height          =   195
             Left            =   2160
-            TabIndex        =   20
+            TabIndex        =   12
             Top             =   360
             Width           =   1095
          End
@@ -108,7 +110,7 @@ Begin VB.Form Form1
             Caption         =   "Telefone"
             Height          =   195
             Left            =   1080
-            TabIndex        =   19
+            TabIndex        =   11
             Top             =   360
             Width           =   975
          End
@@ -116,7 +118,7 @@ Begin VB.Form Form1
             Caption         =   "Email"
             Height          =   195
             Left            =   240
-            TabIndex        =   18
+            TabIndex        =   10
             Top             =   360
             Width           =   735
          End
@@ -124,7 +126,7 @@ Begin VB.Form Form1
       Begin EditLib.fpDateTime fpDateTime1 
          Height          =   375
          Left            =   2160
-         TabIndex        =   16
+         TabIndex        =   5
          Top             =   600
          Width           =   1455
          _Version        =   196608
@@ -191,7 +193,7 @@ Begin VB.Form Form1
          OnFocusNoSelect =   0   'False
          OnFocusPosition =   0
          ControlType     =   0
-         Text            =   "18/09/2020"
+         Text            =   "10/12/2025"
          DateCalcMethod  =   0
          DateTimeFormat  =   0
          UserDefinedFormat=   ""
@@ -231,7 +233,7 @@ Begin VB.Form Form1
       Begin EditLib.fpDoubleSingle fpDoubleSingle1 
          Height          =   375
          Left            =   2160
-         TabIndex        =   14
+         TabIndex        =   9
          Top             =   1440
          Width           =   1095
          _Version        =   196608
@@ -327,7 +329,7 @@ Begin VB.Form Form1
       Begin VB.ComboBox cmbSexo 
          Height          =   315
          Left            =   120
-         TabIndex        =   11
+         TabIndex        =   8
          Top             =   1440
          Width           =   1935
       End
@@ -335,14 +337,14 @@ Begin VB.Form Form1
          Caption         =   "Especial"
          Height          =   255
          Left            =   8040
-         TabIndex        =   10
+         TabIndex        =   14
          Top             =   1560
          Width           =   975
       End
       Begin VB.TextBox txtEndereco 
          Height          =   375
          Left            =   4320
-         TabIndex        =   8
+         TabIndex        =   7
          Top             =   600
          Width           =   4575
       End
@@ -350,7 +352,7 @@ Begin VB.Form Form1
          BackColor       =   &H80000004&
          Height          =   375
          Left            =   3720
-         TabIndex        =   6
+         TabIndex        =   0
          Top             =   600
          Width           =   495
       End
@@ -365,7 +367,7 @@ Begin VB.Form Form1
          Caption         =   "Valor de crédito"
          Height          =   255
          Left            =   2160
-         TabIndex        =   13
+         TabIndex        =   19
          Top             =   1200
          Width           =   1215
       End
@@ -373,7 +375,7 @@ Begin VB.Form Form1
          Caption         =   "Sexo"
          Height          =   255
          Left            =   120
-         TabIndex        =   12
+         TabIndex        =   18
          Top             =   1200
          Width           =   735
       End
@@ -381,7 +383,7 @@ Begin VB.Form Form1
          Caption         =   "Endereço completo"
          Height          =   255
          Left            =   4320
-         TabIndex        =   9
+         TabIndex        =   17
          Top             =   360
          Width           =   2175
       End
@@ -389,7 +391,7 @@ Begin VB.Form Form1
          Caption         =   "Idade"
          Height          =   255
          Left            =   3720
-         TabIndex        =   7
+         TabIndex        =   16
          Top             =   360
          Width           =   735
       End
@@ -397,7 +399,7 @@ Begin VB.Form Form1
          Caption         =   "Nome"
          Height          =   255
          Left            =   120
-         TabIndex        =   5
+         TabIndex        =   15
          Top             =   360
          Width           =   735
       End
@@ -409,9 +411,8 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Option Explicit
-
-Private fModoFormulario As String      ' I = Inclusão / E = Edição / V = Visualização
-Private fIdSelecionado As Long         ' Guarda o ID do registro selecionado
+Private fmodoFormulario As String
+Private fIdSelecionado As Long
 
 Private Enum eSexo
     eSexoMasculino = 1
@@ -429,168 +430,15 @@ Private Sub Form_Load()
     AbreConexao
     ConfigurarSpread
     CarregarClientes
-    fModoFormulario = ""
-    
+    fmodoFormulario = ""
+    AlternarTelaPrincipal False
+
     ' Preenche ComboBox Sexo
     cmbSexo.Clear
-    cmbSexo.AddItem "Masculino"   ' índice 0
-    cmbSexo.AddItem "Feminino"    ' índice 1
-    cmbSexo.AddItem "Indefinido"  ' índice 2
-
-    ' Define padrão como "Indefinido"
+    cmbSexo.AddItem "Masculino"
+    cmbSexo.AddItem "Feminino"
+    cmbSexo.AddItem "Indefinido"
     cmbSexo.ListIndex = 2
-End Sub
-Private Sub ConfigurarSpread()
-     With fpSpread1
-
-        .MaxCols = 9      ' Corrigido – agora bate com as colunas
-        .MaxRows = 1      ' Uma linha padrão vazia
-
-        ' Linha de cabeçalho
-        .Row = 0
-
-        .Col = 1: .ColWidth(1) = 5:  .Text = "Id"
-        .Col = 2: .ColWidth(2) = 10: .Text = "Nome"
-        .Col = 3: .ColWidth(3) = 8: .Text = "Data"
-        .Col = 4: .ColWidth(4) = 4:  .Text = "Idade"
-        .Col = 5: .ColWidth(5) = 18: .Text = "Endereço"
-        .Col = 6: .ColWidth(6) = 5: .Text = "Sexo"
-        .Col = 7: .ColWidth(7) = 5: .Text = "Crédito"
-        .Col = 8: .ColWidth(8) = 9: .Text = "Comunicação"
-        .Col = 9: .ColWidth(9) = 7: .Text = "Especial"
-
-    End With
-End Sub
-Private Sub CarregarClientes()
-
-    On Error GoTo Trata
-
-    Dim rs As ADODB.Recordset
-    Dim sSql As String
-    Dim i As Long
-
-    '-------------------------------------------
-    ' 1) SQL
-    '-------------------------------------------
-    sSql = "SELECT CLI_ID, CLI_NOME, CLI_DATA_NASCIMENTO, CLI_ENDERECO, " & _
-           "CLI_SEXO, CLI_VALOR_CREDITO, CLI_TIPO_COMUNICACAO, CLI_ESPECIAL " & _
-           "FROM CLIENTE ORDER BY CLI_NOME"
-
-    '-------------------------------------------
-    ' 2) Abre Recordset usando pConn
-    '-------------------------------------------
-    Set rs = New ADODB.Recordset
-    rs.Open sSql, pConn, adOpenForwardOnly, adLockReadOnly
-
-    '-------------------------------------------
-    ' 3) Limpa e prepara Spread
-    '-------------------------------------------
-    fpSpread1.MaxRows = 1
-    fpSpread1.Row = 1
-
-    If rs.EOF Then Exit Sub
-
-    '-------------------------------------------
-    ' 4) Preenche linha a linha
-    '-------------------------------------------
-    i = 1
-
-    Do While Not rs.EOF
-
-        If fpSpread1.MaxRows < i + 1 Then
-            fpSpread1.MaxRows = fpSpread1.MaxRows + 1
-        End If
-
-        fpSpread1.Row = i
-
-        '-------------------------------------
-        '  Coluna 1 - ID
-        '-------------------------------------
-        fpSpread1.Col = 1
-        fpSpread1.Text = Nz(rs!CLI_ID, 0)
-
-        '-------------------------------------
-        '  Coluna 2 - Nome
-        '-------------------------------------
-        fpSpread1.Col = 2
-        fpSpread1.Text = Nz(rs!CLI_NOME, "")
-
-        '-------------------------------------
-        '  Coluna 3 - Data
-        '-------------------------------------
-        fpSpread1.Col = 3
-        If IsNull(rs!CLI_DATA_NASCIMENTO) Then
-            fpSpread1.Text = ""
-        Else
-            fpSpread1.Text = Format$(rs!CLI_DATA_NASCIMENTO, "dd/mm/yyyy")
-        End If
-
-        '-------------------------------------
-        '  Coluna 4 - Idade
-        '-------------------------------------
-        fpSpread1.Col = 4
-        If Not IsNull(rs!CLI_DATA_NASCIMENTO) Then
-            fpSpread1.Text = CalculaIdade(rs!CLI_DATA_NASCIMENTO)
-        Else
-            fpSpread1.Text = ""
-        End If
-
-        '-------------------------------------
-        '  Coluna 5 - Endereço
-        '-------------------------------------
-        fpSpread1.Col = 5
-        fpSpread1.Text = Nz(rs!CLI_ENDERECO, "")
-
-        '-------------------------------------
-        '  Coluna 6 - Sexo (ENUM ? texto)
-        '-------------------------------------
-        fpSpread1.Col = 6
-        Select Case Nz(rs!CLI_SEXO, 3)
-            Case eSexoMasculino: fpSpread1.Text = "Masculino"
-            Case eSexoFeminino:  fpSpread1.Text = "Feminino"
-            Case Else:           fpSpread1.Text = "Indefinido"
-        End Select
-
-        '-------------------------------------
-        '  Coluna 7 - Crédito
-        '-------------------------------------
-        fpSpread1.Col = 7
-        fpSpread1.Text = Format$(Nz(rs!CLI_VALOR_CREDITO, 0), "###,##0.00")
-
-        '-------------------------------------
-        '  Coluna 8 - Tipo Comunicação (Enum ? texto)
-        '-------------------------------------
-        fpSpread1.Col = 8
-        Select Case Nz(rs!CLI_TIPO_COMUNICACAO, 1)
-            Case eEmail:     fpSpread1.Text = "E-mail"
-            Case eTelefone:  fpSpread1.Text = "Telefone"
-            Case eWhatsApp:  fpSpread1.Text = "WhatsApp"
-            Case eCarta:     fpSpread1.Text = "Carta"
-            Case Else:       fpSpread1.Text = "N/D"
-        End Select
-
-        '-------------------------------------
-        '  Coluna 9 - Especial (S/N)
-        '-------------------------------------
-        fpSpread1.Col = 9
-        fpSpread1.Text = IIf(Nz(rs!CLI_ESPECIAL, 0) = 1, "Sim", "Não")
-
-        i = i + 1
-        rs.MoveNext
-    Loop
-
-    rs.Close
-    Set rs = Nothing
-    Exit Sub
-
-Trata:
-    MsgBox "Erro ao carregar clientes:" & vbCrLf & Err.Description, vbCritical, "ERRO"
-    On Error Resume Next
-    If Not rs Is Nothing Then
-        If rs.State <> 0 Then rs.Close
-    End If
-    Set rs = Nothing
-
 End Sub
 Public Function Nz(Value As Variant, Optional DefaultValue As Variant) As Variant
     If IsNull(Value) Or IsEmpty(Value) Then
@@ -608,133 +456,143 @@ Private Function CalculaIdade(dataNasc As Date) As Long
         CalculaIdade = CalculaIdade - 1
     End If
 End Function
-Private Sub cmdIncluir_Click()
-    fModoFormulario = "I"
-    frmDados.Visible = True
-    LimparCampos
-    fIdSelecionado = 0
+Private Function PegarIdSelecionado() As Long
+    On Error GoTo Trata
+    If fpSpread1.ActiveRow <= 0 Then
+        PegarIdSelecionado = -1
+        Exit Function
+    End If
+
+    fpSpread1.Row = fpSpread1.ActiveRow
+    fpSpread1.Col = 1
+    Dim sId As String
+    sId = Trim$(fpSpread1.Text)
+    If Len(sId) = 0 Then
+        PegarIdSelecionado = -1
+    Else
+        PegarIdSelecionado = CLng(Val(sId))
+    End If
+    Exit Function
+Trata:
+    PegarIdSelecionado = -1
+End Function
+Private Sub AlternarTelaPrincipal(modoFormulario As Boolean)
+    fpSpread1.Visible = Not modoFormulario
+    frmDados.Visible = modoFormulario
+
+    cmdIncluir.Visible = Not modoFormulario
+    cmdEditar.Visible = Not modoFormulario
+    cmdExcluir.Visible = Not modoFormulario
+    cmdConfirmar.Visible = modoFormulario
+    cmdCancelar.Visible = modoFormulario
 End Sub
-Private Sub cmdConfirmar_Click()
-    Dim sql As String
-    Dim sexo As Integer
-    Dim tipoComunicacao As Integer
-    Dim valorCredito As Double
-    Dim dataNasc As Date
-    Dim especial As Integer
+Private Sub ConfigurarSpread()
+    With fpSpread1
+        .MaxCols = 9
+        .MaxRows = 1
+        .Row = 0
+        .Col = 1: .ColWidth(1) = 5:  .Text = "Id"
+        .Col = 2: .ColWidth(2) = 10: .Text = "Nome"
+        .Col = 3: .ColWidth(3) = 8: .Text = "Data"
+        .Col = 4: .ColWidth(4) = 5: .Text = "Idade"
+        .Col = 5: .ColWidth(5) = 18: .Text = "Endereço"
+        .Col = 6: .ColWidth(6) = 5: .Text = "Sexo"
+        .Col = 7: .ColWidth(7) = 5: .Text = "Crédito"
+        .Col = 8: .ColWidth(8) = 9: .Text = "Comunicação"
+        .Col = 9: .ColWidth(9) = 7: .Text = "Especial"
+        
+    End With
+End Sub
+Private Sub CarregarClientes()
+    On Error GoTo Trata
     Dim rs As ADODB.Recordset
-    
-    ' Validações
-    If Trim(txtNome.Text) = "" Or Trim(txtEndereco.Text) = "" Then
-        MsgBox "Preencha os campos obrigatórios!", vbExclamation
-        Exit Sub
-    End If
-    
-    If fpDateTime1.Text = "" Then
-        MsgBox "Informe a data de nascimento!", vbExclamation
-        Exit Sub
-    Else
-        dataNasc = CDate(fpDateTime1.Text)
-    End If
-    
-    valorCredito = fpDoubleSingle1.Value
-    If valorCredito < 0 Or valorCredito > 5000 Then
-        MsgBox "Valor de crédito inválido!", vbExclamation
-        Exit Sub
-    End If
-    
-    sexo = cmbSexo.ListIndex + 1   ' 1=Masculino, 2=Feminino, 3=Indefinido
-    
-    ' OptionButtons
-    If opbEmail.Value Then tipoComunicacao = eEmail
-    If opbFone.Value Then tipoComunicacao = eTelefone
-    If opbWhats.Value Then tipoComunicacao = eWhatsApp
-    If opbCarta.Value Then tipoComunicacao = eCarta
-    
-    If chbEspecial.Value = vbChecked Then
-        especial = 1
-    Else
-        especial = 0
-    End If
-    
-    ' SQL
-    If fModoFormulario = "I" Then
-        sql = "INSERT INTO CLIENTE (CLI_NOME, CLI_DATA_NASCIMENTO, CLI_ENDERECO, " & _
-              "CLI_SEXO, CLI_VALOR_CREDITO, CLI_TIPO_COMUNICACAO, CLI_ESPECIAL) VALUES (" & _
-              "'" & Replace(txtNome.Text, "'", "''") & "', " & _
-              "'" & Format$(dataNasc, "yyyy-mm-dd") & "', " & _
-              "'" & Replace(txtEndereco.Text, "'", "''") & "', " & _
-              sexo & ", " & valorCredito & ", " & tipoComunicacao & ", " & especial & ")"
-    ElseIf fModoFormulario = "E" Then
-        sql = "UPDATE CLIENTE SET " & _
-              "CLI_NOME='" & Replace(txtNome.Text, "'", "''") & "', " & _
-              "CLI_DATA_NASCIMENTO='" & Format$(dataNasc, "yyyy-mm-dd") & "', " & _
-              "CLI_ENDERECO='" & Replace(txtEndereco.Text, "'", "''") & "', " & _
-              "CLI_SEXO=" & sexo & ", " & _
-              "CLI_VALOR_CREDITO=" & valorCredito & ", " & _
-              "CLI_TIPO_COMUNICACAO=" & tipoComunicacao & ", " & _
-              "CLI_ESPECIAL=" & especial & " " & _
-              "WHERE CLI_ID=" & fIdSelecionado
-    End If
-    
-    Debug.Print "Especial selecionado:", especial, chbEspecial.Value
+    Dim sSql As String
+    Dim i As Long
 
-    pConn.Execute sql
-    CarregarClientes
-End Sub
+    sSql = "SELECT CLI_ID, CLI_NOME, CLI_DATA_NASCIMENTO, CLI_ENDERECO, " & _
+           "CLI_SEXO, CLI_VALOR_CREDITO, CLI_TIPO_COMUNICACAO, CLI_ESPECIAL " & _
+           "FROM CLIENTE ORDER BY CLI_NOME"
 
-Private Sub LimparCampos()
+    Set rs = New ADODB.Recordset
+    rs.Open sSql, pConn, adOpenForwardOnly, adLockReadOnly
 
-    ' Campos de texto
-    txtNome.Text = ""
-    txtEndereco.Text = ""
+    fpSpread1.ClearRange 1, 1, fpSpread1.MaxCols, fpSpread1.MaxRows, True
+    fpSpread1.MaxRows = 1
+    fpSpread1.Row = 1
 
-    ' Data de nascimento (fpDateTime)
-    fpDateTime1.Text = ""
+    If rs.EOF Then Exit Sub
+    i = 1
 
-    ' Valor de crédito (fpDoubleSingle)
-    fpDoubleSingle1.Value = 0
+    Do While Not rs.EOF
+        If fpSpread1.MaxRows < i + 1 Then fpSpread1.MaxRows = fpSpread1.MaxRows + 1
+        fpSpread1.Row = i
 
-    ' Sexo (ComboBox) ? volta para "Indefinido"
-    cmbSexo.ListIndex = 2   ' 0=Masculino, 1=Feminino, 2=Indefinido
+        ' ID
+        fpSpread1.Col = 1: fpSpread1.Text = Nz(rs!CLI_ID, 0)
 
-    ' Tipo de comunicação (OptionButtons) ? WhatsApp como padrão
-    opbEmail.Value = False
-    opbFone.Value = False
-    opbWhats.Value = True
-    opbCarta.Value = False
+        ' Nome
+        fpSpread1.Col = 2: fpSpread1.Text = Nz(rs!CLI_NOME, "")
 
-    ' Checkbox Especial
-    chbEspecial.Value = vbUnchecked
+        ' Data Nascimento
+        fpSpread1.Col = 3
+        If IsNull(rs!CLI_DATA_NASCIMENTO) Then
+            fpSpread1.Text = ""
+        Else
+            fpSpread1.Text = Format$(rs!CLI_DATA_NASCIMENTO, "dd/MM/yyyy")
+        End If
 
-    ' Idade calculada (campo somente leitura)
-    txtIdade.Text = ""
+        ' Idade
+        fpSpread1.Col = 4
+        If IsNull(rs!CLI_DATA_NASCIMENTO) Then
+            fpSpread1.Text = ""
+        Else
+            fpSpread1.Text = CalculaIdade(rs!CLI_DATA_NASCIMENTO)
+        End If
 
-End Sub
-Private Sub fpDateTime1_Change()
-    If fpDateTime1.Text <> "" Then
-        txtIdade.Text = CalculaIdade(CDate(fpDateTime1.Text))
-    Else
-        txtIdade.Text = ""
-    End If
-End Sub
-Private Sub cmdExcluir_Click()
-    fIdSelecionado = PegarIdSelecionado()
-    If fIdSelecionado <= 0 Then
-        MsgBox "Selecione um registro para excluir.", vbExclamation
-        Exit Sub
-    End If
+        ' Endereço
+        fpSpread1.Col = 5: fpSpread1.Text = Nz(rs!CLI_ENDERECO, "")
 
-    If MsgBox("Deseja realmente excluir este registro?", vbYesNo + vbQuestion) = vbNo Then Exit Sub
+        ' Sexo
+        fpSpread1.Col = 6
+        Select Case Nz(rs!CLI_SEXO, eSexoIndefinido)
+            Case eSexoMasculino: fpSpread1.Text = "Masculino"
+            Case eSexoFeminino:  fpSpread1.Text = "Feminino"
+            Case Else:           fpSpread1.Text = "Indefinido"
+        End Select
 
-    pConn.Execute "DELETE FROM CLIENTE WHERE CLI_ID=" & fIdSelecionado
-    CarregarClientes
-End Sub
-Private Sub fpSpread1_DblClick(ByVal Col As Long, ByVal Row As Long)
-    fIdSelecionado = PegarIdSelecionado()
-    If fIdSelecionado <= 0 Then Exit Sub
-        fModoFormulario = "E"
-        CarregarDadosCliente fIdSelecionado
-        frmDados.Visible = True
+        ' Crédito
+        fpSpread1.Col = 7: fpSpread1.Text = Format$(Nz(rs!CLI_VALOR_CREDITO, 0), "###,##0.00")
+
+        ' Tipo Comunicação
+        fpSpread1.Col = 8
+        Select Case Nz(rs!CLI_TIPO_COMUNICACAO, eWhatsApp)
+            Case eEmail:     fpSpread1.Text = "E-mail"
+            Case eTelefone:  fpSpread1.Text = "Telefone"
+            Case eWhatsApp:  fpSpread1.Text = "WhatsApp"
+            Case eCarta:     fpSpread1.Text = "Carta"
+            Case Else:       fpSpread1.Text = "N/D"
+        End Select
+
+        ' Especial
+        fpSpread1.Col = 9
+        If CBool(Nz(rs!CLI_ESPECIAL, 0)) Then
+            fpSpread1.Text = "Sim"
+        Else
+            fpSpread1.Text = "Não"
+        End If
+
+        i = i + 1
+        rs.MoveNext
+    Loop
+
+    rs.Close
+    Set rs = Nothing
+    Exit Sub
+Trata:
+    MsgBox "Erro ao carregar clientes:" & vbCrLf & Err.Description, vbCritical, "ERRO"
+    On Error Resume Next
+    If Not rs Is Nothing Then If rs.State <> 0 Then rs.Close
+    Set rs = Nothing
 End Sub
 Private Sub CarregarDadosCliente(ByVal idCliente As Long)
     Dim rs As New ADODB.Recordset
@@ -757,7 +615,7 @@ Private Sub CarregarDadosCliente(ByVal idCliente As Long)
         Select Case Nz(rs!CLI_SEXO, eSexoIndefinido)
             Case eSexoMasculino: cmbSexo.ListIndex = 0
             Case eSexoFeminino:  cmbSexo.ListIndex = 1
-            Case eSexoIndefinido: cmbSexo.ListIndex = 2
+            Case Else:           cmbSexo.ListIndex = 2
         End Select
 
         Select Case Nz(rs!CLI_TIPO_COMUNICACAO, eWhatsApp)
@@ -767,49 +625,132 @@ Private Sub CarregarDadosCliente(ByVal idCliente As Long)
             Case eCarta:     opbCarta.Value = True
         End Select
 
-        If Nz(rs!CLI_ESPECIAL, 0) = 1 Then
-            chbEspecial.Value = vbChecked
-        Else
-            chbEspecial.Value = vbUnchecked
-        End If
-
+        chbEspecial.Value = IIf(CBool(Nz(rs!CLI_ESPECIAL, 0)), vbChecked, vbUnchecked)
     End If
 
     rs.Close
 End Sub
-Private Function PegarIdSelecionado() As Long
-    On Error GoTo Trata
+Private Sub LimparCampos()
+    txtNome.Text = ""
+    txtEndereco.Text = ""
+    fpDateTime1.Text = ""
+    fpDoubleSingle1.Value = 0
+    cmbSexo.ListIndex = 2
+    opbEmail.Value = False
+    opbFone.Value = False
+    opbWhats.Value = True
+    opbCarta.Value = False
+    chbEspecial.Value = vbUnchecked
+    txtIdade.Text = ""
+End Sub
+Private Sub cmdIncluir_Click()
+    fmodoFormulario = "I"
+    LimparCampos
+    fIdSelecionado = 0
+    AlternarTelaPrincipal True
+End Sub
+Private Sub cmdEditar_Click()
+    fIdSelecionado = PegarIdSelecionado()
+    If fIdSelecionado <= 0 Then
+        MsgBox "Selecione um registro para editar.", vbExclamation
+        Exit Sub
+    End If
+    fmodoFormulario = "E"
+    CarregarDadosCliente fIdSelecionado
+    AlternarTelaPrincipal True
+End Sub
+Private Sub cmdCancelar_Click()
+    LimparCampos
+    fmodoFormulario = ""
+    fIdSelecionado = 0
+    AlternarTelaPrincipal False
+End Sub
+Private Sub cmdExcluir_Click()
+    fIdSelecionado = PegarIdSelecionado()
+    If fIdSelecionado <= 0 Then
+        MsgBox "Selecione um registro para excluir.", vbExclamation
+        Exit Sub
+    End If
+    If MsgBox("Deseja realmente excluir este registro?", vbYesNo + vbQuestion) = vbNo Then Exit Sub
+    pConn.Execute "DELETE FROM CLIENTE WHERE CLI_ID=" & fIdSelecionado
+    CarregarClientes
+End Sub
+Private Sub cmdConfirmar_Click()
+    Dim sql As String
+    Dim sexo As Integer
+    Dim tipoComunicacao As Integer
+    Dim valorCredito As Double
+    Dim dataNasc As Date
+    Dim especial As Integer
 
-    ' Se não houver linha selecionada
-    If fpSpread1.ActiveRow <= 0 Then
-        PegarIdSelecionado = -1
-        Exit Function
+    ' Validações
+    If Trim(txtNome.Text) = "" Or Trim(txtEndereco.Text) = "" Then
+        MsgBox "Preencha os campos obrigatórios!", vbExclamation
+        Exit Sub
     End If
 
-    ' Pega o valor da coluna 1 (ID) da linha ativa
-    fpSpread1.Row = fpSpread1.ActiveRow
-    fpSpread1.Col = 1
-
-    Dim sId As String
-    sId = Trim$(fpSpread1.Text)
-
-    If Len(sId) = 0 Then
-        PegarIdSelecionado = -1
+    If fpDateTime1.Text = "" Then
+        MsgBox "Informe a data de nascimento!", vbExclamation
+        Exit Sub
     Else
-        PegarIdSelecionado = CLng(Val(sId))
+        dataNasc = CDate(fpDateTime1.Text)
     End If
-    Exit Function
 
-Trata:
-    PegarIdSelecionado = -1
-End Function
+    valorCredito = fpDoubleSingle1.Value
+    If valorCredito < 0 Or valorCredito > 5000 Then
+        MsgBox "Valor de crédito inválido!", vbExclamation
+        Exit Sub
+    End If
 
+    sexo = cmbSexo.ListIndex + 1
 
+    If opbEmail.Value Then tipoComunicacao = eEmail
+    If opbFone.Value Then tipoComunicacao = eTelefone
+    If opbWhats.Value Then tipoComunicacao = eWhatsApp
+    If opbCarta.Value Then tipoComunicacao = eCarta
 
+    especial = IIf(chbEspecial.Value = vbChecked, 1, 0)
 
+    ' SQL
+    If fmodoFormulario = "I" Then
+        sql = "INSERT INTO CLIENTE (CLI_NOME, CLI_DATA_NASCIMENTO, CLI_ENDERECO, " & _
+              "CLI_SEXO, CLI_VALOR_CREDITO, CLI_TIPO_COMUNICACAO, CLI_ESPECIAL) VALUES (" & _
+              "'" & Replace(txtNome.Text, "'", "''") & "', " & _
+              "'" & Format$(dataNasc, "yyyy-mm-dd") & "', " & _
+              "'" & Replace(txtEndereco.Text, "'", "''") & "', " & _
+              sexo & ", " & valorCredito & ", " & tipoComunicacao & ", " & especial & ")"
+    ElseIf fmodoFormulario = "E" Then
+        sql = "UPDATE CLIENTE SET " & _
+              "CLI_NOME='" & Replace(txtNome.Text, "'", "''") & "', " & _
+              "CLI_DATA_NASCIMENTO='" & Format$(dataNasc, "yyyy-mm-dd") & "', " & _
+              "CLI_ENDERECO='" & Replace(txtEndereco.Text, "'", "''") & "', " & _
+              "CLI_SEXO=" & sexo & ", " & _
+              "CLI_VALOR_CREDITO=" & valorCredito & ", " & _
+              "CLI_TIPO_COMUNICACAO=" & tipoComunicacao & ", " & _
+              "CLI_ESPECIAL=" & especial & " " & _
+              "WHERE CLI_ID=" & fIdSelecionado
+    End If
 
-    
-
-
+    pConn.Execute sql
+    CarregarClientes
+    LimparCampos
+    fmodoFormulario = ""
+    fIdSelecionado = 0
+    AlternarTelaPrincipal False
+End Sub
+Private Sub fpDateTime1_LostFocus()
+    If fpDateTime1.Text <> "" Then
+        txtIdade.Text = CalculaIdade(CDate(fpDateTime1.Text))
+    Else
+        txtIdade.Text = ""
+    End If
+End Sub
+Private Sub fpSpread1_DblClick(ByVal Col As Long, ByVal Row As Long)
+    fIdSelecionado = PegarIdSelecionado()
+    If fIdSelecionado <= 0 Then Exit Sub
+    fmodoFormulario = "E"
+    CarregarDadosCliente fIdSelecionado
+    AlternarTelaPrincipal True
+End Sub
 
 
